@@ -5,9 +5,21 @@ import models.*;
 
 public class BasicTest extends UnitTest {
 
-    @Test
-    public void aVeryImportantThingToTest() {
-        assertEquals(2, 1 + 1);
+    @Before
+    public void setup() {
+        Fixtures.deleteAll();
     }
+
+	
+	@Test
+	public void createAndRetrievePhrase() {
+		new Phrase("Vador", "Luc", "Luc, je suis ton père").save();
+		
+		Phrase phrase = Phrase.find("byAuthor", "Vador").first();
+		
+		assertNotNull(phrase);
+		assertEquals("Luc", phrase.postBy);
+		
+	}
 
 }

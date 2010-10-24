@@ -2,7 +2,12 @@ package models;
 
 import java.util.Date;
 
-public class Phrase {
+import javax.persistence.Entity;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Phrase extends Model {
 	public String phrase;
 	public Date postedAt;
 	public String author;

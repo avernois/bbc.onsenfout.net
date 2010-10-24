@@ -1,4 +1,26 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{welcome /}
+#{if latestPhrase}
+    
+    #{displayPhrase post:latestPhrase, as:'home' /}
+    
+    #{if olderPhrases.size()}
+    
+        <div class="older-posts">
+            <h3>Les ptites phrases précédentes</h3>
+        
+            #{list items:olderPhrases, as:'oldPhrase'}
+                #{displayPhrase post:oldPhrase, as:'teaser' /}
+            #{/list}
+        </div>
+        
+    #{/if}
+    
+#{/if}
+ 
+#{else}
+    <div class="empty">
+        There is currently nothing to read here.
+    </div>
+#{/else}
