@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Administration</title>		
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        #{get 'moreStyles' /}	
+        <link rel="stylesheet" type="text/css" media="screen" 
+                href="@{'/public/stylesheets/main.css'}" />
+        <link rel="shortcut icon" type="image/png" 
+                href="@{'/public/images/favicon.png'}" />
+        <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}"></script>
+        <script src="@{'/public/javascripts/jquery.tools.min.js'}"></script>
+    </head>
+    <body id="admin">
+        
+        
+        
+        <div id="header">
+            <div id="logo">
+                BlaBla Collection <span>administration</span>
+            </div>
+            <ul id="tools">
+                <li>
+                    <a href="@{Secure.logout()}">Log out</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="main">
+            <ul id="adminMenu">
+        <li class="${request.controller == 'Admin' ? 'selected' : ''}">
+            <a href="@{Admin.index()}">Mes phrases</a>
+        </li>
+        #{secure.check 'admin'}
+            <li class="${request.controller == 'Phrases' ? 'selected' : ''}">
+                <a href="@{Phrases.list()}">Phrases</a>
+            </li>
+            <li class="${request.controller == 'Users' ? 'selected' : ''}">
+                <a href="@{Users.list()}">Users</a>
+            </li>
+        #{/secure.check}
+    </ul>
+        
+            #{doLayout /} 
+        </div>
+        
+     
+        <p id="footer">
+            BBC is a built with the <a href="http://www.playframework.org">Play framework</a>
+            and mainly based on its tutorial
+        </p>
+        
+    </body>
+</html>

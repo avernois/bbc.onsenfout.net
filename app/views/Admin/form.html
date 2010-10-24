@@ -1,0 +1,34 @@
+#{extends 'admin.html' /}
+ 
+<h3>Write, <span>a new phrase</span></h3>
+ 
+#{form @save(phrase?.id)}
+ 
+    #{ifErrors}
+        <p class="error">
+            Please correct these errors.
+        </p>
+    #{/ifErrors}
+     
+ 
+    <p>
+        #{field 'phrase'}
+        <label>Write here:</label>
+        <textarea name="${field.name}" 
+            class="${field.errorClass}">${phrase?.phrase}</textarea>
+        #{/field}
+    </p>
+ 
+    <p>
+        #{field 'author'}
+        <label>Author:</label>
+        <input type="text" size="50" 
+            name="${field.name}" value="${phrase?.author}" />
+        #{/field}
+    </p>
+    
+    <p>
+        <input type="submit" value="Publish this post to the blog" />
+    </p>
+    
+#{/form}

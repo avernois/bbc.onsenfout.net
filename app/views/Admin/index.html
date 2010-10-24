@@ -1,0 +1,14 @@
+#{extends 'admin.html' /}
+
+<h3>Welcome ${user}, <span>you have written ${phrases.size() ?: 'no'} ${phrases.pluralize('phrase', 'phrases')} so far</span></h3>
+ 
+#{list items:phrases, as:'phrase'}
+    <p class="post ${post_parity}">
+        <a href="@{Admin.form(phrase.id)}">de ${phrase.author} : ${phrase.phrase}</a>
+    </p>
+#{/list}
+
+<p id="newPost" >
+    <a href="@{form()}"><span>+</span> Submit a new phrase</a>
+</p>
+
