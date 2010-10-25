@@ -1,0 +1,22 @@
+#{extends 'admin.html' /}
+
+<h3>Welcome ${user}, here is what we know about you</h3>
+<div id="form"> 
+    <p>
+        
+        <label>login:</label>${me?.login}
+        
+    </p>
+ 
+    <p>
+        <label>password:</label>********
+    </p>
+
+    <p>
+        <label>nickname:</label>${me?.nickname}
+    </p>
+</div>
+<p id="newPost" >
+    <a href="@{form()}"><span>+</span> Edit my info</a>
+</p>
+

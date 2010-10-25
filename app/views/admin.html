@@ -32,6 +32,9 @@
         <li class="${request.controller == 'Admin' ? 'selected' : ''}">
             <a href="@{Admin.index()}">Mes phrases</a>
         </li>
+        <li class="${request.controller == 'MyAccount' ? 'selected' : ''}">
+            <a href="@{MyAccount.index()}">Moi</a>
+        </li>
         #{secure.check 'admin'}
             <li class="${request.controller == 'Phrases' ? 'selected' : ''}">
                 <a href="@{Phrases.list()}">Phrases</a>

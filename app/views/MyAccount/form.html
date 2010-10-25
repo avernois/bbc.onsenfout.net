@@ -1,0 +1,38 @@
+#{extends 'admin.html' /}
+ 
+<h3>Write, <span>a new phrase</span></h3>
+ 
+#{form @save()}
+ 
+    #{ifErrors}
+        <p class="error">
+            Please correct these errors.
+        </p>
+    #{/ifErrors}
+     
+    <p>        
+        <label>login:</label>${me?.login} 
+    </p>
+ 
+    <p>
+        #{field 'password'}
+        <label>password:</label>
+        <input type="text" size="50" 
+            name="${field.name}" value="${me?.password}" />
+        #{/field}
+    </p>
+
+    <p>
+        #{field 'nickname'}
+        <label>nickname:</label>
+        <input type="text" size="50" 
+            name="${field.name}" value="${me?.nickname}" />
+        #{/field}
+    </p>
+
+    
+    <p>
+        <input type="submit" value="Update my info" />
+    </p>
+    
+#{/form}
