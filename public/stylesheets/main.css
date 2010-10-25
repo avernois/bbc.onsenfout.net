@@ -34,6 +34,11 @@ body {
     font-size: 70%;
 }
 
+#logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
 #tools {
     list-style: none;
     margin: 0;
