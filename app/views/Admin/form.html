@@ -2,7 +2,7 @@
  
 <h3>Write, <span>a new phrase</span></h3>
  
-#{form @save(phrase?.id)}
+#{form @save(myPhrase?.id)}
  
     #{ifErrors}
         <p class="error">
@@ -15,7 +15,7 @@
         #{field 'phrase'}
         <label>Write here:</label>
         <textarea name="${field.name}" 
-            class="${field.errorClass}">${phrase?.phrase}</textarea>
+            class="${field.errorClass}">${myPhrase?.phrase}</textarea>
         #{/field}
     </p>
  
@@ -23,7 +23,7 @@
         #{field 'author'}
         <label>Author:</label>
         <input type="text" size="50" 
-            name="${field.name}" value="${phrase?.author}" />
+            name="${field.name}" value="${myPhrase?.author}" />
         #{/field}
     </p>
     

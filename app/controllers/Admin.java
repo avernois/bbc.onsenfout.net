@@ -28,36 +28,35 @@ public class Admin extends Controller {
     
     public static void form(Long id) {
         if(id != null) {
-            Phrase phrase = Phrase.findById(id);
-            render(phrase);
+            Phrase myPhrase = Phrase.findById(id);
+            render(myPhrase);
         }
         render();
     }
 
      
     public static void save(Long id, String phrase, String author) {
-        Phrase newPhrase;
+        Phrase myPhrase;
         if(id == null) {
             // Create post
         	User postBy = User.find("byLogin", Security.connected()).first();
-        	newPhrase = new Phrase(author, postBy, phrase);
+        	myPhrase = new Phrase(author, postBy, phrase);
         } else {
             // Retrieve post
-        	newPhrase = Phrase.findById(id);
+        	myPhrase = Phrase.findById(id);
             // Edit
-        	newPhrase.phrase = phrase;
-        	newPhrase.author = author;
+        	myPhrase.phrase = phrase;
+        	myPhrase.author = author;
         }
 
         // Validate
-        validation.valid(newPhrase);
+        validation.valid(myPhrase);
         if(validation.hasErrors()) {
-            render("@form", newPhrase);
+            render("@form", myPhrase);
         }
         // Save
-        newPhrase.save();
+        myPhrase.save();
         index();
-
     }
 
     
