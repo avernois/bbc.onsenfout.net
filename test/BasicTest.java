@@ -14,7 +14,7 @@ public class BasicTest extends UnitTest {
     public void createAndRetrieveUser() {
     	new User("luke", "secret", "Luke S.").save();
     	
-    	User luc = Phrase.find("byLogin", "luke").first();
+    	User luc = User.find("byLogin", "luke").first();
     	assertNotNull(luc);
     	assertEquals("Luke S.", luc.nickname);
     }

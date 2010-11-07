@@ -1,12 +1,35 @@
 # you describe your data using the YAML notation here
 # and then load them using Fixtures.load("data.yml")
 
-User(antoine):
-  login: antoine
-  password: secret
-  fullname: Antoine
-  
-User(jean):
-  login: jean
-  password: secret
-  fullname: Jean
+User(Luke):
+    login: luke
+    password: secret
+    nickname: Luke S.
+
+User(Antoine):
+    login: antoine
+    password: secret
+    nickname: A.
+    isAdmin: true
+
+Phrase(p1):
+   author: Vador
+   postBy: Luke
+   phrase: > 
+           Luke, je suis ton père
+   postedAt: 2010-10-10
+   
+Phrase(p2):
+   author: Hannibal
+   postBy: Antoine
+   phrase: >
+           J’adore quand un plan se déroule sans accroc.
+   postedAt: 2010-10-11
+
+
+Phrase(p3):
+   author: Yoda
+   postBy: Antoine
+   phrase: >
+           Do or do not, there is no try.
+   postedAt: 2010-10-12

@@ -1,7 +1,29 @@
 *{ You can use plain selenium command using the selenium tag }*
 
+#{fixture delete:'all', load:'data.yml' /}
+
+
 #{selenium}
+    clearSession()
+
     // Open the home page, and check that no error occured
     open('/')
+    waitForPageToLoad(1000)
+    
     assertNotTitle('Application error')
+#{/selenium}
+
+#{selenium 'Check home page'}
+    clearSession()
+ 
+    // Open the home page
+    open('/')
+ 
+    // Check that the front post is present
+    assertTextPresent('Do or do not')
+    assertTextPresent('by Yoda, 12 Oct 10')
+
+    // Check older posts
+    assertTextPresent('J’adore quand un plan se déroule sans accroc.')
+    assertTextPresent('Luke, je suis ton père')
 #{/selenium}
