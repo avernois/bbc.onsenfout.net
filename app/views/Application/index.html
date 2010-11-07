@@ -5,17 +5,17 @@
     
     #{displayPhrase post:latestPhrase, as:'home' /}
     
-    #{if olderPhrases.size()}
+    
     
         <div class="older-posts">
             <h3>Les ptites phrases précédentes</h3>
-        
-            #{list items:olderPhrases, as:'oldPhrase'}
-                #{displayPhrase post:oldPhrase, as:'' /}
-            #{/list}
+       		#{paginate.list items:paginator, as:'oldPhrase'}
+    			#{displayPhrase post:oldPhrase, as:'' /}
+    		#{/paginate.list} 
+    		#{paginate.controls items:paginator /} 
         </div>
         
-    #{/if}
+    
     
 #{/if}
  

@@ -20,10 +20,63 @@
     open('/')
  
     // Check that the front post is present
-    assertTextPresent('Do or do not')
-    assertTextPresent('by Yoda, 12 Oct 10')
+    assertTextPresent('P30 - Do or do not')
+    assertTextPresent('by Yoda, 30 Oct 10')
 
     // Check older posts
-    assertTextPresent('J’adore quand un plan se déroule sans accroc.')
-    assertTextPresent('Luke, je suis ton père')
+    assertTextPresent('P29 - Le Tim de l'équipe de Dave utilise la méthode à Gilles')
+    assertTextPresent('P25 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.')
 #{/selenium}
+
+#{selenium 'Check pagination'}
+    clearSession()
+ 
+    // Open the home page
+    open('/')
+ 
+    // Check that the front post is present
+    assertTextPresent('P30 - Do or do not')
+    assertTextPresent('by Yoda, 30 Oct 10')
+    
+    // Check that paginated phrase are present
+    assertTextPresent('P29 - ')
+    assertTextPresent('P28 - ')
+    assertTextPresent('P27 - ')
+    assertTextPresent('P26 - ')
+    assertTextPresent('P25 - ')
+	assertTextPresent('P24 - ')
+	assertTextPresent('P23 - ')
+	assertTextPresent('P22 - ')
+	assertTextPresent('P21 - ')
+	assertTextPresent('P20 - ')
+	assertTextNotPresent('P19')
+
+
+#{/selenium}
+
+#{selenium 'Check pagination page 2'}
+    clearSession()
+ 
+    // Open the page 2
+    open('/?page=2')
+ 
+    // Check that the front post is present
+    assertTextPresent('P30 - Do or do not')
+    assertTextPresent('by Yoda, 30 Oct 10')
+    
+    // Check that paginated phrase are present
+    // Check that the front post is present
+    assertTextPresent('P19 - ')
+    assertTextPresent('P18 - ')
+    assertTextPresent('P17 - ')
+    assertTextPresent('P16 - ')
+    assertTextPresent('P15 - ')
+	assertTextPresent('P14 - ')
+	assertTextPresent('P13 - ')
+	assertTextPresent('P12 - ')
+	assertTextPresent('P11 - ')
+	assertTextPresent('P10 - ')
+	assertTextNotPresent('P9')
+	assertTextNotPresent('P20')
+#{/selenium}
+

@@ -4,6 +4,8 @@ import java.util.List;
 
 import models.Phrase;
 import play.Play;
+import play.modules.paginate.ModelPaginator;
+import play.modules.paginate.ValuePaginator;
 import play.mvc.Before;
 import play.mvc.Controller;
 
@@ -17,7 +19,11 @@ public class Application extends Controller {
 
     public static void index() {
         Phrase latestPhrase = Phrase.find("order by postedAt desc").first();
-        List<Phrase> olderPhrases = Phrase.find("order by postedAt desc").from(1).fetch(10);
-        render(latestPhrase, olderPhrases);
+        List<Phrase> olderPhrases = Phrase.find("order by postedAt desc").from(1).fetch();
+        
+        ValuePaginator paginator = new ValuePaginator(olderPhrases);
+        paginator.setPageSize(10);
+        
+        render(latestPhrase, paginator);
     }
 }

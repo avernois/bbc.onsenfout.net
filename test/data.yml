@@ -1,35 +1,248 @@
 # you describe your data using the YAML notation here
 # and then load them using Fixtures.load("data.yml")
 
-User(Luke):
-    login: luke
-    password: secret
-    nickname: Luke S.
+#User(Luke):
+#    login: luke
+#    password: secret
+#    nickname: Luke S.
 
 User(Antoine):
     login: antoine
     password: secret
-    nickname: A.
+    nickname: Antoine
     isAdmin: true
 
+User(Jean):
+    login: jean
+    password: jean-secret
+    nickname: Jean
+    isAdmin: false
+
 Phrase(p1):
-   author: Vador
-   postBy: Luke
+   author: Antoine
+   postBy: Antoine
    phrase: > 
-           Luke, je suis ton père
-   postedAt: 2010-10-10
+           Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-1
    
 Phrase(p2):
-   author: Hannibal
+   author: >
+           Antoine et Jean
    postBy: Antoine
-   phrase: >
-           J’adore quand un plan se déroule sans accroc.
-   postedAt: 2010-10-11
-
-
+   phrase: > 
+           Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-2
+   
 Phrase(p3):
+   author: Antoine
+   postBy: Antoine
+   phrase: > 
+           P3 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-3
+   
+Phrase(p4):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P4 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-4
+   
+Phrase(p5):
+   author: Antoine
+   postBy: Antoine
+   phrase: > 
+           P5 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-5
+   
+Phrase(p6):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P6 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-6
+   
+Phrase(p7):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P7 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-7
+
+Phrase(p8):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P8 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-8
+   
+Phrase(p9):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P9 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-9
+   
+Phrase(p10):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P10 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-10
+   
+Phrase(p11):
+   author: Antoine
+   postBy: Antoine
+   phrase: > 
+           P11 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-11
+   
+Phrase(p12):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P12 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-12
+   
+Phrase(p13):
+   author: Antoine
+   postBy: Antoine
+   phrase: > 
+           P13 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-13
+   
+Phrase(p14):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P14 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-14
+   
+Phrase(p15):
+   author: Antoine
+   postBy: Antoine
+   phrase: > 
+           P15 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-15
+   
+Phrase(p16):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P16 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-16
+   
+Phrase(p17):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P17 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-17
+   
+Phrase(p18):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P18 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-18
+   
+Phrase(p19):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P19 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-19
+   
+Phrase(p20):
+   author: Antoine
+   postBy: Antoine
+   phrase: > 
+           P20 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-20
+   
+Phrase(p21):
+   author: Antoine
+   postBy: Antoine
+   phrase: > 
+           P21 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-21
+   
+Phrase(p22):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P22 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-22
+   
+Phrase(p23):
+   author: Antoine
+   postBy: Antoine
+   phrase: > 
+           P23 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-23
+   
+Phrase(p24):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P24 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-24
+   
+Phrase(p25):
+   author: Antoine
+   postBy: Antoine
+   phrase: > 
+           P25 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+   postedAt: 2010-10-25
+   
+Phrase(p26):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P26 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-26
+   
+Phrase(p27):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P27 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-27
+  
+Phrase(p28):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P28 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-28   
+   
+Phrase(p29):
+   author: >
+           Antoine et Jean
+   postBy: Antoine
+   phrase: > 
+           P29 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
+   postedAt: 2010-10-29
+   
+Phrase(p30):
    author: Yoda
    postBy: Antoine
    phrase: >
-           Do or do not, there is no try.
-   postedAt: 2010-10-12
+           P30 - Do or do not 
+   postedAt: 2010-10-30   
