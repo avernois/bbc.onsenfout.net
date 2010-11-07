@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                                       Application.index
+GET		/atom									Application.atom
 
 # Administration
 GET     /admin/?                                Admin.index

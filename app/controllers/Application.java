@@ -15,6 +15,7 @@ public class Application extends Controller {
 	static void addDefaults() {
 	    renderArgs.put("blogTitle", Play.configuration.getProperty("blog.title"));
 	    renderArgs.put("blogBaseline", Play.configuration.getProperty("blog.baseline"));
+	    renderArgs.put("blogurl", Play.configuration.getProperty("blog.url"));
 	}
 
     public static void index() {
@@ -25,5 +26,11 @@ public class Application extends Controller {
         paginator.setPageSize(10);
         
         render(latestPhrase, paginator);
+    }
+    
+    public static void atom() {
+    	request.format = "xml";
+    	List<Phrase> lastPhrases = Phrase.find("order by postedAt desc").fetch(15);
+    	render(lastPhrases);
     }
 }
