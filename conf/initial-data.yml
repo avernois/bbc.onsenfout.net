@@ -18,231 +18,306 @@ User(Jean):
     nickname: Jean
     isAdmin: false
 
+
+Author(antoine):
+    name: Antoine
+    score: 0
+
+Author(yoda):
+    name: Yoda
+    score: 0
+
+Author(jean):
+    name: Jean
+    score: 0
+
+
 Phrase(p1):
-   author: Antoine
+   authors: 
+            - antoine
    postBy: Antoine
    phrase: > 
            Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-1
+   score: 1
    
 Phrase(p2):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-2
+   score: 1
    
 Phrase(p3):
-   author: Antoine
+   authors: 
+          - antoine
    postBy: Antoine
    phrase: > 
            P3 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-3
+   score: 1
    
 Phrase(p4):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P4 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-4
+   score: 1
    
 Phrase(p5):
-   author: Antoine
+   authors:
+            - antoine
    postBy: Antoine
    phrase: > 
            P5 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-5
+   score: 1
    
 Phrase(p6):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P6 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-6
+   score: 1
    
 Phrase(p7):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P7 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-7
-
+   score: 1
+   
 Phrase(p8):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P8 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-8
-   
+   score: 1
+      
 Phrase(p9):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P9 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-9
+   score: 1
    
 Phrase(p10):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P10 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-10
+   score: 1
    
 Phrase(p11):
-   author: Antoine
+   authors: 
+            - antoine
    postBy: Antoine
    phrase: > 
            P11 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-11
+   score: 1
    
 Phrase(p12):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P12 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-12
+   score: 1
    
 Phrase(p13):
-   author: Antoine
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P13 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-13
+   score: 1
    
 Phrase(p14):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P14 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-14
+   score: 1
    
 Phrase(p15):
-   author: Antoine
+   authors:
+           - antoine
    postBy: Antoine
    phrase: > 
            P15 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-15
+   score: 1
    
 Phrase(p16):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P16 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-16
+   score: 1
    
 Phrase(p17):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P17 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-17
+   score: 1
    
 Phrase(p18):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P18 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-18
+   score: 1
    
 Phrase(p19):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P19 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-19
+   score: 1
    
 Phrase(p20):
-   author: Antoine
+   authors: 
+           - antoine
    postBy: Antoine
    phrase: > 
            P20 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-20
+   score: 1
    
 Phrase(p21):
-   author: Antoine
+   authors: 
+            - antoine
    postBy: Antoine
    phrase: > 
            P21 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-21
+   score: 1
    
 Phrase(p22):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P22 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-22
+   score: 1
    
 Phrase(p23):
-   author: Antoine
+   authors:
+            - antoine
    postBy: Antoine
    phrase: > 
            P23 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-23
+   score: 1
    
 Phrase(p24):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P24 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-24
+   score: 1
    
 Phrase(p25):
-   author: Antoine
+   authors: 
+            - antoine
    postBy: Antoine
    phrase: > 
            P25 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
    postedAt: 2010-10-25
+   score: 1
    
 Phrase(p26):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P26 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-26
+   score: 1
    
 Phrase(p27):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P27 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-27
+   score: 1
   
 Phrase(p28):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P28 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-28   
+   postedAt: 2010-10-28
+   score: 1
    
 Phrase(p29):
-   author: >
-           Antoine et Jean
+   authors: 
+           - antoine
+           - jean
    postBy: Antoine
    phrase: > 
            P29 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
    postedAt: 2010-10-29
+   score: 1
    
 Phrase(p30):
-   author: Yoda
+   authors:
+            - yoda
    postBy: Antoine
    phrase: >
            P30 - Do or do not 
-   postedAt: 2010-10-30   
+   postedAt: 2010-10-30
+   score: 1  

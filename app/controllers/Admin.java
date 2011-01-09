@@ -35,18 +35,30 @@ public class Admin extends Controller {
     }
 
      
-    public static void save(Long id, String phrase, String author) {
+    public static void save(Long id, String phrase, String authors) {
         Phrase myPhrase;
         if(id == null) {
             // Create post
         	User postBy = User.find("byLogin", Security.connected()).first();
-        	myPhrase = new Phrase(author, postBy, phrase);
+        	myPhrase = new Phrase(postBy, phrase);
+        	
+        	for(String author : authors.split("\\s+")) {
+                if(author.trim().length() > 0) {
+                    myPhrase.addAuthor(author);
+                }
+            }
         } else {
             // Retrieve post
         	myPhrase = Phrase.findById(id);
             // Edit
         	myPhrase.phrase = phrase;
-        	myPhrase.author = author;
+
+        	myPhrase.removeAllAuthor();
+        	for(String author : authors.split("\\s+")) {
+                if(author.trim().length() > 0) {
+                    myPhrase.addAuthor(author);
+                }
+            }
         }
 
         // Validate
@@ -58,8 +70,4 @@ public class Admin extends Controller {
         myPhrase.save();
         index();
     }
-
-    
-
-	
 }

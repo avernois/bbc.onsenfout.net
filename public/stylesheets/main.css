@@ -135,7 +135,7 @@ body {
 }
 
 .post .post-content {
-    position: relative;
+	width: 85%;
     background: #fff;
     padding: 10px;
     margin: 10px 0 50px 0;
@@ -143,6 +143,20 @@ body {
     -moz-border-radius: 10px;
     -webkit-box-shadow: 0 2px 0 #BBBBBB;
 }
+
+.post .post-score {
+	width: 2%;
+	float: right;
+  	text-align: center;
+    background: #fff;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-box-shadow: 0 2px 0 #BBBBBB;
+}
+
 
 .post .about {
     text-indent: -999em;

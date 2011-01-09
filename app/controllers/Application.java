@@ -33,4 +33,9 @@ public class Application extends Controller {
     	List<Phrase> lastPhrases = Phrase.find("order by postedAt desc").fetch(15);
     	render(lastPhrases);
     }
+    
+    public static void phrasesfrom(String from) {
+    	List<Phrase> saidBy = Phrase.findByAuthor(from);
+    	render (saidBy, from);
+    }
 }

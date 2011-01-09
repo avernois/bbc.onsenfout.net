@@ -6,7 +6,6 @@
     #{displayPhrase post:latestPhrase, as:'home' /}
     
     
-    
         <div class="older-posts">
             <h3>Les ptites phrases précédentes</h3>
        		#{paginate.list items:paginator, as:'oldPhrase'}
@@ -14,9 +13,6 @@
     		#{/paginate.list} 
     		#{paginate.controls items:paginator /} 
         </div>
-        
-    
-    
 #{/if}
  
 #{else}

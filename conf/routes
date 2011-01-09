@@ -6,6 +6,13 @@
 GET     /                                       Application.index
 GET		/atom									Application.atom
 
+
+GET     /phrases/{from}                    Application.phrasesfrom
+
+GET     /vote                    Votes.index
+GET     /vote/{id}                    Votes.voteFor
+
+
 # Administration
 GET     /admin/?                                Admin.index
 *       /admin                                  module:crud

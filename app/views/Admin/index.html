@@ -4,7 +4,11 @@
  
 #{list items:phrases, as:'phrase'}
     <p class="post ${post_parity}">
-        <a href="@{Admin.form(phrase.id)}">de ${phrase.author} : ${phrase.phrase}</a>
+        <a href="@{Admin.form(phrase.id)}">de 
+        #{list items:phrase.authors, as:'author'}
+          ${author}
+        #{/list} 
+        : ${phrase.phrase}</a>
     </p>
 #{/list}
 

@@ -34,14 +34,65 @@ public class BasicTest extends UnitTest {
 	public void createAndRetrievePhrase() {
 		User luc = new User("luke", "secret", "Luke S.").save();
 		
-		new Phrase("Vador", luc, "Luc, je suis ton père").save();
+		new Phrase(luc, "Luke, je suis ton père").save();
 		
 		
 		Phrase phrase = Phrase.find("postBy.login", "luke").first();
 		
 		assertNotNull(phrase);
-		assertEquals("Vador", phrase.author);
+		assertEquals("Luke, je suis ton père", phrase.phrase);
+		assertEquals("luke", phrase.postBy.login);
 		
 	}
+	
+	
+	@Test
+	public void testAddAuthors() {
+	    // Create a new user and save it
+	    User poster = new User("toto@gmail.com", "secret", "Toto").save();
+	    
+	    // Create a new post
+	    Phrase aPhrase = new Phrase(poster, "Hello world").save();
+	    
+	    // Well
+	    assertEquals(0, Phrase.findByAuthor("Luke").size());
+	    
+	    // Tag it now
+	    aPhrase.addAuthor("Luke").save();
+	    
+	    // Check
+	    assertEquals(1, Phrase.findByAuthor("Luke").size());        
+	    assertEquals(0, Phrase.findByAuthor("Vador").size());
+	    
+	}
 
+
+	@Test
+	public void testAuthorScoreIncWhenAddedToAPhrase() {
+	    // Create a new user and save it
+	    User poster = new User("toto@gmail.com", "secret", "Toto").save();
+	 
+	    
+	    Author luke = Author.findOrCreate("Luke");
+	    Integer oldScore = luke.score;
+	    
+	    // Create a new post
+	    Phrase aPhrase = new Phrase(poster, "Hello world").save();
+	    
+	    // Attribute it to Luke
+	    aPhrase.addAuthor("Luke").save();
+	    
+	    luke = Author.findOrCreate("Luke");
+	    
+	    // Check that luke score has increased
+	    assertEquals(Integer.valueOf(oldScore + 1), luke.score);
+	    
+	    aPhrase = new Phrase(poster, "Hello world").save();
+	    aPhrase.addAuthor("Luke").save();
+	    
+	    // Check that luke score has increased	    
+	    assertEquals(Integer.valueOf(oldScore + 2), luke.score);
+	}
+
+	
 }

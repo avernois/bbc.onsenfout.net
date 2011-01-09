@@ -20,10 +20,10 @@
     </p>
  
     <p>
-        #{field 'author'}
-        <label>Author:</label>
+        #{field 'authors'}
+        <label>Auteurs (séparés par un espace):</label>
         <input type="text" size="50" 
-            name="${field.name}" value="${myPhrase?.author}" />
+            name="${field.name}" value="${myPhrase?.authors?.join(' ')}" />
         #{/field}
     </p>
     
