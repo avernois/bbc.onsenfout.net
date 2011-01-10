@@ -45,13 +45,12 @@ public class Phrase extends Model {
 	
 	public Phrase addAuthor(String name) {
 		Author author = Author.findOrCreate(name);
-		if (!this.authors.contains(author)) {
-			this.authors.add(Author.findOrCreate(name));
+		
+		if (!isAuthor(author)) {
+			this.authors.add(author);
+			author.incScore();
 		}
-		
-		author.incScore();
-		author.save();
-		
+
 		return this;
 	}
 	
@@ -69,6 +68,14 @@ public class Phrase extends Model {
 	}
 	
 	public String toString() {
-		return " posted by " + postBy.nickname;
+		return " posted by " + postBy.nickname + " : " + phrase;
+	}
+	
+	private boolean isAuthor(Author author) {
+		for (Author anAuthor : authors) {
+			if (anAuthor.equals(author))
+				return true;
+		}
+		return false;
 	}
 }

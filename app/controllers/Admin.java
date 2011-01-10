@@ -63,6 +63,7 @@ public class Admin extends Controller {
 
         // Validate
         validation.valid(myPhrase);
+        
         if(validation.hasErrors()) {
             render("@form", myPhrase);
         }

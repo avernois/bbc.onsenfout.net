@@ -58,11 +58,12 @@ public class BasicTest extends UnitTest {
 	    assertEquals(0, Phrase.findByAuthor("Luke").size());
 	    
 	    // Tag it now
-	    aPhrase.addAuthor("Luke").save();
+	    aPhrase.addAuthor("Luke").addAuthor("Vador").save();
+	    
 	    
 	    // Check
 	    assertEquals(1, Phrase.findByAuthor("Luke").size());        
-	    assertEquals(0, Phrase.findByAuthor("Vador").size());
+	    assertEquals(1, Phrase.findByAuthor("Vador").size());
 	    
 	}
 
@@ -95,4 +96,28 @@ public class BasicTest extends UnitTest {
 	}
 
 	
+	@Test
+	public void testAuthorScoreNotIncWhenAddedToAPhraseSheIsAlreadyAnAuthor() {
+	    // Create a new user and save it
+	    User poster = new User("toto@gmail.com", "secret", "Toto").save();
+	 
+	    
+	    Author luke = Author.findOrCreate("Luke");
+	    Integer oldScore = luke.score;
+	    
+	    // Create a new post
+	    Phrase aPhrase = new Phrase(poster, "Hello world").save();
+	    
+	    // Attribute it to Luke
+	    aPhrase.addAuthor("Luke").save();
+	    
+	    luke = Author.findOrCreate("Luke");
+	    
+	    // Check that luke score has increased
+	    assertEquals(Integer.valueOf(oldScore + 1), luke.score);
+	    
+	    aPhrase.addAuthor("Luke").save();
+	    
+	    assertEquals(Integer.valueOf(oldScore + 1), luke.score);
+	}
 }

@@ -2,11 +2,13 @@ package models;
 
 import javax.persistence.Entity;
 
+import play.data.validation.Required;
 import play.db.jpa.Model;
 
 @Entity
 public class Author extends Model implements Comparable<Author> {
 	
+	@Required
 	public String name;
 	public Integer score;
 	
@@ -38,8 +40,6 @@ public class Author extends Model implements Comparable<Author> {
 	
 	@Override
 	public int compareTo(Author author) {
-		name.compareTo(author.name);
-		return 0;
-	}
-
+		return name.compareTo(author.name);
+	}	
 }
