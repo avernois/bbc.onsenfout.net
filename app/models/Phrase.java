@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -54,9 +55,29 @@ public class Phrase extends Model {
 		return this;
 	}
 	
-	public Phrase removeAllAuthor() {
+	private Phrase removeAllAuthor() {
+		
+		for (Author author : authors) {
+			author.decScore();
+		
+		}	
 		this.authors.clear();
+		
 		return this;
+	}
+	
+	public List<Author> updateAuthorsFromString(String newAuthors) {
+		List<Author> removedAuthors = new ArrayList<Author>(authors);
+		
+		this.removeAllAuthor();
+    	for(String author : newAuthors.split("\\s+")) {
+            if(author.trim().length() > 0) {
+                this.addAuthor(author);
+                removedAuthors.remove(author);
+            }
+        }
+		
+		return removedAuthors;
 	}
 	
 	public void incScore() {

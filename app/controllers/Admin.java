@@ -1,7 +1,9 @@
 package controllers;
 
+import java.util.Collections;
 import java.util.List;
 
+import models.Author;
 import models.Phrase;
 import models.User;
 import play.mvc.Before;
@@ -37,6 +39,8 @@ public class Admin extends Controller {
      
     public static void save(Long id, String phrase, String authors) {
         Phrase myPhrase;
+        List<Author> removedAuthors = Collections.emptyList();
+        
         if(id == null) {
             // Create post
         	User postBy = User.find("byLogin", Security.connected()).first();
@@ -50,15 +54,10 @@ public class Admin extends Controller {
         } else {
             // Retrieve post
         	myPhrase = Phrase.findById(id);
-            // Edit
+            
         	myPhrase.phrase = phrase;
-
-        	myPhrase.removeAllAuthor();
-        	for(String author : authors.split("\\s+")) {
-                if(author.trim().length() > 0) {
-                    myPhrase.addAuthor(author);
-                }
-            }
+           
+        	removedAuthors = myPhrase.updateAuthorsFromString(authors);
         }
 
         // Validate
@@ -69,6 +68,9 @@ public class Admin extends Controller {
         }
         // Save
         myPhrase.save();
+        for (Author author : removedAuthors) {
+        	author.save();
+        }
         index();
     }
 }
