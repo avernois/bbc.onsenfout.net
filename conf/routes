@@ -8,6 +8,7 @@ GET		/atom									Application.atom
 
 
 GET     /phrases/{from}                    Application.phrasesfrom
+GET     /phrase/{id}                    Application.phrase
 
 GET     /vote                    Votes.index
 GET     /vote/{id}                    Votes.voteFor

@@ -5,7 +5,7 @@
         	  <a href="@{Application.phrasesfrom(author)}">${author.name}</a>(${author.score})
         	#{/list}
         </span>
-        <span class="post-date">${_post.postedAt.format('dd MMM yy')}</span>
+        <span class="post-date">${_post.postedAt.format('dd MMM yy')} <a href="@{Application.phrase(_post.id)}">link</a></span>
     </div>
     #{if _as != 'teaser'}
     <div class="post-panel">

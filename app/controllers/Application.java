@@ -38,4 +38,10 @@ public class Application extends Controller {
     	List<Phrase> saidBy = Phrase.findByAuthor(from);
     	render (saidBy, from);
     }
+    
+    public static void phrase(long id) {
+    	Phrase phrase = Phrase.findById(id);
+    	render(phrase);
+    }
+
 }
