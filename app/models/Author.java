@@ -35,17 +35,11 @@ public class Author extends Model implements Comparable<Author> {
 	
 	
 	public void incScore() {
-		System.out.println("Incrémente le score de " + this.name);
-		System.out.println("Avant : " + this.score);
 		this.score += 1;
-		System.out.println("Après : " + this.score);
 	}
 
 	public void decScore() {
-		System.out.println("Décrémente le score de " + this.name);
-		System.out.println("Avant : " + this.score);
 		this.score -= 1;
-		System.out.println("Après : " + this.score);
 	}
 	
 	@Override
