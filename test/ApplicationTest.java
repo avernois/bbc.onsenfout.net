@@ -29,6 +29,14 @@ public class ApplicationTest extends FunctionalTest {
         assertStatus(302, response);
         assertHeaderEquals("Location", "http://localhost/login", response);
     }
+    
+    @Test
+    public void testAtom() {
+    	Response response = GET("/atom");
+    	assertIsOk(response);
+    	assertContentType("text/xml", response);
+    	assertCharset("utf-8", response);
+    }
 
     
 }

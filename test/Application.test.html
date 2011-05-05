@@ -21,7 +21,7 @@
  
     // Check that the front post is present
     assertTextPresent('P30 - Do or do not')
-    assertTextPresent('by Yoda 30 Oct 10')
+    assertTextPresent('by Yoda() 30 Oct 10')
 
     // Check older posts
     assertTextPresent('P29 - Le Tim de l'équipe de Dave utilise la méthode à Gilles')
@@ -36,7 +36,7 @@
  
     // Check that the front post is present
     assertTextPresent('P30 - Do or do not')
-    assertTextPresent('by Yoda 30 Oct 10')
+    assertTextPresent('by Yoda() 30 Oct 10')
     
     // Check that paginated phrase are present
     assertTextPresent('P29 - ')
@@ -62,7 +62,7 @@
  
     // Check that the front post is present
     assertTextPresent('P30 - Do or do not')
-    assertTextPresent('by Yoda 30 Oct 10')
+    assertTextPresent('by Yoda() 30 Oct 10')
     
     // Check that paginated phrase are present
     // Check that the front post is present
@@ -92,7 +92,7 @@
     assertTextPresent('P27 - ')
 	assertTextNotPresent('P30')
 	assertTextNotPresent('Yoda')
-	assertTextPresentOnce('Les ptites phrases de Antoine')
+	assertTextPresent('Les ptites phrases de Antoine')
 #{/selenium}
 
 

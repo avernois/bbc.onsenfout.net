@@ -10,12 +10,16 @@
  
   #{list items:lastPhrases, as:'phrase'}
 	<entry>
-    	<title>Une phrase de ${phrase.author}</title>
+    	<title>Une phrase de #{list items:phrase.authors, as:'author'} ${author.name} #{/list}</title>
     	<link href="${blogUrl}" rel="alternate" type="text/html"  title="BlaBla Collection" />
     	
     	<published>${phrase.postedAt}</published>
     	<updated>${phrase.postedAt}</updated>
-    	<author><name>${phrase.postBy}</name></author>
+    	<author>
+    	#{list items:phrase.authors, as:'author'}
+        	  <name>${author.name}</name>
+        #{/list}
+        </author>
     	<content type="html">${phrase.phrase}</content>
 
 
