@@ -197,13 +197,13 @@ blog.url=http://localhost:9000/
 # Prod configuration
 # ~~~~~
 %gulltopp.application.mode=PROD
-%gulltopp.db=mysql:bbc-blabla:QTVFCj5nCZumJDd3@bbc-blabla
+%gulltopp.db=mysql:bbc-blabla:PASSWORD@bbc-blabla
 %gulltopp.jpa.ddl=validate
 
 %gulltopp.db.url=jdbc:mysql://localhost:3306/bbc-blabla
 %gulltopp.db.driver=com.mysql.jdbc.Driver
 %gulltopp.db.user=bbc-blabla
-%gulltopp.db.pass=QTVFCj5nCZumJDd3
+%gulltopp.db.pass=PASSWORD
 %gulltopp.blog.url=http://bbc.onsenfout.net/
 
 # Import the secure module
@@ -217,4 +217,3 @@ module.crud=${play.path}/modules/crud
 
 #module de pagination
 module.paginate=${play.path}/modules/paginate-head
-
