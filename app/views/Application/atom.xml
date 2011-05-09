@@ -11,7 +11,7 @@
   #{list items:lastPhrases, as:'phrase'}
 	<entry>
     	<title>Une phrase de #{list items:phrase.authors, as:'author'} ${author.name} #{/list}</title>
-    	<link href="${blogUrl}" rel="alternate" type="text/html"  title="BlaBla Collection" />
+    	<link href="@{Application.phrase(phrase.id)}" rel="alternate" type="text/html"  title="BlaBla Collection" />
     	
     	<published>${phrase.postedAt}</published>
     	<updated>${phrase.postedAt}</updated>
