@@ -1,323 +1,1097 @@
-# you describe your data using the YAML notation here
-# and then load them using Fixtures.load("data.yml")
+Author(AAntoine):
+  name: Antoine
+  score: 82
 
-#User(Luke):
-#    login: luke
-#    password: secret
-#    nickname: Luke S.
+Author(AJean):
+  name: Jean
+  score: 104
 
-User(Antoine):
-    login: antoine
-    password: secret
-    nickname: Antoine
-    isAdmin: true
+Author(AFranck):
+  name: Franck
+  score: 76
 
-User(Jean):
-    login: jean
-    password: jean-secret
-    nickname: Jean
-    isAdmin: false
+Author(ALudo):
+  name: Ludo
+  score: 246
 
+Author(AMaurin):
+  name: Maurin
+  score: 8
 
-Author(antoine):
-    name: Antoine
-    score: 0
+Author(ASylvain):
+  name: Sylvain
+  score: 10
 
-Author(yoda):
-    name: Yoda
-    score: 0
+Author(AJeff):
+  name: Jean-François
+  score: 11
 
-Author(jean):
-    name: Jean
-    score: 0
+Author(AFrancois):
+  name: François
+  score: 11
 
+Author(AFred):
+  name: Fred
+  score: 20
+
+Author(ALudovic):
+  name: Ludovic
+  score: 1
+
+Author(ADjamel):
+  name: Djamel
+  score: 2
+
+Author(AStephane):
+  name: Stéphane
+  score: 3
+
+Author(ABenjamin):
+  name: Benjamin
+  score: 17
+
+Author(AJohnnyTof):
+  name: JohnnyTof
+  score: 3
+
+Author(ABen):
+  name: Ben
+  score: 3
+
+User(UAntoine):
+  isAdmin: 1
+  login: antoine
+  nickname: Antoine
+  password: init
+
+User(UJean):
+  isAdmin: 0
+  login: jean
+  nickname: Jean
+  password: init
+
+User(ULudo):
+  isAdmin: 0
+  login: ludo
+  nickname: Ludo
+  password: init
+
+User(UFred):
+  isAdmin: 0
+  login: Fred
+  nickname: Fred
+  password: init
+
+User(Usylvain):
+  isAdmin: 0
+  login: sylvain
+  nickname: sylvain
+  password: init
+
+User(Ujennifer):
+  isAdmin: 0
+  login: jennifer
+  nickname: jennifer
+  password: init
+
+User(Uthomas):
+  isAdmin: 0
+  login: thomas
+  nickname: thomas
+  password: init
 
 Phrase(p1):
-   authors: 
-            - antoine
-   postBy: Antoine
-   phrase: > 
-           Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-1
-   score: 1
-   
+  phrase: |
+         Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
+  postedAt: 2010-10-15 00:00:00
+  authors:
+        - AAntoine
+  postBy: UAntoine
+  score: 2
+
 Phrase(p2):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-2
-   score: 1
-   
+  phrase: |
+         Le Tim de l'équipe de Dave utilise la méthode à Gilles
+  postedAt: 2010-10-15 00:00:00
+  authors:
+        - AAntoine
+        - AJean
+  postBy: UAntoine
+  score: 5
+
 Phrase(p3):
-   authors: 
-          - antoine
-   postBy: Antoine
-   phrase: > 
-           P3 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-3
-   score: 1
-   
+  phrase: |
+         C'est trop fort les tests unitaires
+  postedAt: 2010-10-25 00:00:00
+  authors:
+        - AJean
+  postBy: UAntoine
+  score: 4
+
 Phrase(p4):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P4 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-4
-   score: 1
-   
+  phrase: |
+         On les a pas vu avant de les voir ! 
+  postedAt: 2010-10-25 00:00:00
+  authors:
+        - AAntoine
+  postBy: UJean
+  score: 2
+
 Phrase(p5):
-   authors:
-            - antoine
-   postBy: Antoine
-   phrase: > 
-           P5 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-5
-   score: 1
-   
+  phrase: |
+         Refactor, je t'adore 
+  postedAt: 2010-10-22 00:00:00
+  authors:
+        - AJean
+  postBy: UAntoine
+  score: 4
+
 Phrase(p6):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P6 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-6
-   score: 1
-   
+  phrase: |
+         Reboot de l'après midi, c'est bon pour la philosophie 
+  postedAt: 2010-07-21 00:00:00
+  authors:
+        - AJean
+  postBy: UAntoine
+  score: 3
+
 Phrase(p7):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P7 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-7
-   score: 1
-   
+  phrase: |
+         Toi, tout ce qui t'intéresse, c'est de partir en Wicket 
+  postedAt: 2010-07-16 00:00:00
+  authors:
+        - AFranck
+  postBy: UAntoine
+  score: 3
+
 Phrase(p8):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P8 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-8
-   score: 1
-      
+  phrase: |
+         Todo, en fait c'était plutôt tout dur. 
+  postedAt: 2010-07-16 00:00:00
+  authors:
+        - AFranck
+  postBy: UAntoine
+  score: 4
+
 Phrase(p9):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P9 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-9
-   score: 1
-   
+  phrase: |
+         Qui ne tente rien, ne tente rien.
+  postedAt: 2010-07-15 00:00:00
+  authors:
+        - AMaurin
+  postBy: UAntoine
+  score: 3
+
 Phrase(p10):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P10 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-10
-   score: 1
-   
+  phrase: |
+         Le lien, c'est le mâle de la hyène. 
+  postedAt: 2010-07-09 00:00:00
+  authors:
+        - AJean
+  postBy: UAntoine
+  score: 3
+
 Phrase(p11):
-   authors: 
-            - antoine
-   postBy: Antoine
-   phrase: > 
-           P11 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-11
-   score: 1
-   
+  phrase: |
+         Le copier coller c'est MAL!
+  postedAt: 2010-10-26 12:39:24
+  authors:
+        - AAntoine
+  postBy: UJean
+  score: 2
+
 Phrase(p12):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P12 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-12
-   score: 1
-   
+  phrase: |
+         Les bouquins c'est BIEN!
+  postedAt: 2010-10-27 07:09:14
+  authors:
+        - AJean
+  postBy: UJean
+  score: 3
+
 Phrase(p13):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P13 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-13
-   score: 1
-   
+  phrase: |
+         Jean : il faudrait une méthode qui retourne un objet par chemin
+         Ludo : une méthode égyptienne 
+  postedAt: 2010-10-27 12:15:35
+  authors:
+        - AJean
+        - ALudo
+  postBy: UAntoine
+  score: 3
+
 Phrase(p14):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P14 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-14
-   score: 1
-   
+  phrase: |
+         PUB: Moi quand j'ai perdu mon code de carte bleu, avant d'appeler ma banque je demande à Google
+         MERCI Google!!!
+  postedAt: 2010-10-27 15:33:25
+  authors:
+        - AAntoine
+        - AJean
+  postBy: UJean
+  score: 3
+
 Phrase(p15):
-   authors:
-           - antoine
-   postBy: Antoine
-   phrase: > 
-           P15 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-15
-   score: 1
-   
+  phrase: |
+         Celui qui ne fait rien ne risque rien!
+  postedAt: 2010-10-29 09:48:18
+  authors:
+        - AAntoine
+  postBy: UJean
+  score: 2
+
 Phrase(p16):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P16 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-16
-   score: 1
-   
+  phrase: |
+         Jean: Un tartan ou un kilt c'est pareil
+         Antoine: Ha non ! elle est énorme!
+         Jean: Prétentieux !
+  postedAt: 2010-10-29 14:18:44
+  authors:
+        - AAntoine
+        - AJean
+  postBy: UJean
+  score: 3
+
 Phrase(p17):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P17 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-17
-   score: 1
-   
+  phrase: |
+         Jean : je suis le seul à varier
+         Ludo : ça va t'es pas pourri
+  postedAt: 2010-10-29 14:24:34
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 3
+
 Phrase(p18):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P18 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-18
-   score: 1
-   
+  phrase: |
+         4 novembre c'est la fête national du Tonga.
+         Antoine: Ha ouais! c'est la fête du slip!
+  postedAt: 2010-11-04 08:55:42
+  authors:
+        - AAntoine
+  postBy: UJean
+  score: 3
+
 Phrase(p19):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P19 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-19
-   score: 1
-   
+  phrase: |
+         Le père Noël il est rouge parce que ses tests unitaires passent pas.
+  postedAt: 2010-11-04 00:00:00
+  authors:
+        - AJean
+  postBy: UAntoine
+  score: 3
+
 Phrase(p20):
-   authors: 
-           - antoine
-   postBy: Antoine
-   phrase: > 
-           P20 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-20
-   score: 1
-   
+  phrase: |
+         Sellers de partir
+  postedAt: 2010-11-04 00:00:00
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 3
+
 Phrase(p21):
-   authors: 
-            - antoine
-   postBy: Antoine
-   phrase: > 
-           P21 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-21
-   score: 1
-   
+  phrase: |
+         Tant qu'il y a du bip, il y a de l'espoir
+  postedAt: 2010-11-05 07:29:07
+  authors:
+        - AFred
+  postBy: UAntoine
+  score: 3
+
 Phrase(p22):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P22 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-22
-   score: 1
-   
+  phrase: |
+         C'est dommage il serait 'Bi' antoine, on pourrait l'appeler le bitonio!!
+  postedAt: 2010-11-05 11:00:34
+  authors:
+        - AFranck
+  postBy: UJean
+  score: 4
+
 Phrase(p23):
-   authors:
-            - antoine
-   postBy: Antoine
-   phrase: > 
-           P23 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-23
-   score: 1
-   
+  phrase: |
+         Digester c'est trop, si yen avait que 5 ou 6 ca irait mieux!
+  postedAt: 2010-11-09 14:10:49
+  authors:
+        - AFranck
+  postBy: UJean
+  score: 3
+
 Phrase(p24):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P24 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-24
-   score: 1
-   
+  phrase: |
+         La spécialité de Lannion c'est la soupe!
+  postedAt: 2010-11-09 00:00:00
+  authors:
+        - AFranck
+  postBy: UJean
+  score: 4
+
 Phrase(p25):
-   authors: 
-            - antoine
-   postBy: Antoine
-   phrase: > 
-           P25 - Si tu ne fais qu'une chose à la fois, tu ne peux pas en faire deux.
-   postedAt: 2010-10-25
-   score: 1
-   
+  phrase: |
+         Tu fais tout avec paint
+         Paint c'est la vie!
+  postedAt: 2010-11-09 15:42:22
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
 Phrase(p26):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P26 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-26
-   score: 1
-   
+  phrase: |
+         Tu mets tes couilles sur la table. Ca, c'est de la gestion de projet.
+  postedAt: 2010-11-10 15:41:15
+  authors:
+        - AJeff
+  postBy: UAntoine
+  score: 3
+
 Phrase(p27):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P27 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-27
-   score: 1
-  
+  phrase: |
+         François: Je peux prendre des notes
+         Jean: Do, Mi, Fa, Sol voilà je te les ai données
+  postedAt: 2010-11-15 16:32:53
+  authors:
+        - AJean
+  postBy: ULudo
+  score: 3
+
 Phrase(p28):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P28 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-28
-   score: 1
-   
+  phrase: |
+         Guy: c'est le pom qui est foireux
+         Jean: t'as fait de la compote... de pom !?
+  postedAt: 2010-11-17 17:01:35
+  authors:
+        - AJean
+  postBy: ULudo
+  score: 3
+
 Phrase(p29):
-   authors: 
-           - antoine
-           - jean
-   postBy: Antoine
-   phrase: > 
-           P29 - Le Tim de l'équipe de Dave utilise la méthode à Gilles
-   postedAt: 2010-10-29
-   score: 1
-   
+  phrase: |
+         Bon, je m'éclipse !
+  postedAt: 2010-11-23 10:41:26
+  authors:
+        - ASylvain
+  postBy: UFred
+  score: 3
+
 Phrase(p30):
-   authors:
-            - yoda
-   postBy: Antoine
-   phrase: >
-           P30 - Do or do not 
-   postedAt: 2010-10-30
-   score: 1  
+  phrase: |
+         Jean: C'est pas une dataview de BeanPortModel, c'est une DataView de Port
+         Antoine: On ne dit pas c'est une dataview de porc on dit c'est une dataview mal conçue!
+  postedAt: 2010-11-23 13:44:20
+  authors:
+        - AAntoine
+  postBy: UJean
+  score: 4
+
+Phrase(p31):
+  phrase: |
+         Antoine: voila tu as les colonnes par tri croissant
+         Ludovic: et les chocos aussi!
+  postedAt: 2010-11-24 08:22:50
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p32):
+  phrase: |
+         Dick Revert
+  postedAt: 2010-11-24 10:32:17
+  authors:
+        - AJean
+  postBy: ULudo
+  score: 3
+
+Phrase(p33):
+  phrase: |
+         Ludo: c'est un vieux laid
+         Antoine: qui n'est pas stel
+  postedAt: 2010-11-30 14:35:11
+  authors:
+        - AAntoine
+        - ALudo
+  postBy: ULudo
+  score: 3
+
+Phrase(p34):
+  phrase: |
+         Antoine: Ha il reste du thé, je fais toujours les fonds de thé
+         Ludovic: Mister-T
+  postedAt: 2010-12-02 09:48:20
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p35):
+  phrase: |
+         Tu es allé faire du Jugging avec les Jugger ?
+  postedAt: 2010-12-02 13:31:50
+  authors:
+        - AJean
+  postBy: UAntoine
+  score: 3
+
+Phrase(p36):
+  phrase: |
+         Jean: Encore 1 niveau et je pourrais invoquer le pouvoir de Thor
+         Ludovic: C'est quand t'as pas raison!
+  postedAt: 2010-12-03 12:50:07
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p37):
+  phrase: |
+         Jean: maurin tu sais faire du XPath
+         François: Quoi qu'est ce qu'XPath ?
+  postedAt: 2010-12-07 08:14:50
+  authors:
+        - AFrancois
+  postBy: UJean
+  score: 3
+
+Phrase(p38):
+  phrase: |
+         Sed, c'est bien
+  postedAt: 2010-12-09 12:42:23
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 3
+
+Phrase(p39):
+  phrase: |
+         Antoine: Pour faire de vrai croissant il te faut un laminoir
+         Ludovic: Et avec un lamiblanc ça marche?
+  postedAt: 2010-12-09 15:32:19
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p40):
+  phrase: |
+         Antoine: C'est comme les fourmis y en a qui foutent rien et yen a qui travaillent ça compense!
+         Ludovic: Cafarelli
+  postedAt: 2010-12-09 15:35:32
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p41):
+  phrase: |
+         Delphine: Il travaille à Clermont-Ferrand à Almerys
+         Ludovic: il travaille à la mairieSS de Clermont-Ferrand!
+  postedAt: 2010-12-14 14:20:34
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p42):
+  phrase: |
+         Je fais un deployDocus
+  postedAt: 2010-12-14 15:09:40
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p43):
+  phrase: |
+         Ludovic: deploy
+         Antoine: ploy
+  postedAt: 2010-12-15 08:07:20
+  authors:
+        - AAntoine
+  postBy: UJean
+  score: 3
+
+Phrase(p44):
+  phrase: |
+         Jean François a une réunion avec SIDOBRE. Est-ce qu'il vont rentrer à 7 dans son bureau ?
+  postedAt: 2010-12-15 09:13:15
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 3
+
+Phrase(p45):
+  phrase: |
+         Guy: on a un bug
+         Jean: c'est pas un bug c'est feature
+         Ludovic: back to the feature
+  postedAt: 2010-12-15 14:55:22
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 97
+
+Phrase(p46):
+  phrase: |
+         Jean (en parlant d'eclipse qui plante): Ha le batard!
+         Ludovic: Non, Albator!
+  postedAt: 2010-12-15 15:24:07
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p47):
+  phrase: |
+         Jean: Au bas mot
+         Jean: Obama
+         Antoine: Ô Balma
+         Ludo: Ô Balma...ské
+         Jean: Ohé Ohé
+  postedAt: 2010-12-17 09:40:39
+  authors:
+        - AAntoine
+        - AJean
+        - ALudo
+  postBy: ULudo
+  score: 6
+
+Phrase(p48):
+  phrase: |
+         Antoine: on a des problèmes de salle
+         Franck: et de propre aussi!
+  postedAt: 2010-12-17 13:00:05
+  authors:
+        - AFranck
+  postBy: UJean
+  score: 3
+
+Phrase(p49):
+  phrase: |
+         Maurin: je fais la tache?
+         Jean: Ben oui tu te colles un post-it au cul et en avant
+         Fred: Et c'est comme ça qu'il se fait des taches!
+  postedAt: 2010-12-20 13:10:33
+  authors:
+        - AFred
+  postBy: UJean
+  score: 4
+
+Phrase(p50):
+  phrase: |
+         etatPort, etatLien, etatCarte, et ta Mère
+  postedAt: 2010-12-30 15:57:22
+  authors:
+        - AAntoine
+        - ALudo
+  postBy: ULudo
+  score: 9
+
+Phrase(p51):
+  phrase: |
+         Jean: ya le Tie-Fighter
+         Ludovic: et ya le Taekwondo, et la soupe Thaï aussi!
+  postedAt: 2011-01-04 09:30:48
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p52):
+  phrase: |
+         Tous: Ba!! c'est moche ta légende!
+         Antoine: il y a une raison à ce qu'il y ait des designers et ne pas laisser les développeurs le faire.
+         Ludovic: mais moi je ne suis que neufsigner ...
+  postedAt: 2011-01-04 10:30:22
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p53):
+  phrase: |
+         Antoine: J'ai un mail à envoyer à Mr Aubry
+         Jean: Cabrac ?
+  postedAt: 2011-01-06 16:33:36
+  authors:
+        - AJean
+  postBy: ULudo
+  score: 3
+
+Phrase(p54):
+  phrase: |
+         Si on avait un Jacques dans l'équipe on pourrait dire, Jacques a deploy
+  postedAt: 2011-01-07 09:59:22
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 3
+
+Phrase(p55):
+  phrase: |
+         Ludovic: Va falloir le commiter
+         Jean: Ha oui le concomiter
+         Maurin: c'est qui le con ?
+         Antoine: le con qui commite !
+  postedAt: 2011-01-10 00:00:00
+  authors:
+        - AAntoine
+        - AJean
+        - ALudo
+        - AMaurin
+  postBy: UJean
+  score: 3
+
+Phrase(p56):
+  phrase: |
+         Ludo : vous avez un truc pour la (ndr : le mal de) tête ?
+         Jean : un bonnet
+  postedAt: 2011-01-12 08:02:20
+  authors:
+        - AJean
+  postBy: UAntoine
+  score: 3
+
+Phrase(p57):
+  phrase: |
+         Antoine : pour les créationnistes, dieu a mis les os de dinosaures en terre pour tester notre foi
+         Ludo : mais on les mange pas
+  postedAt: 2011-01-12 13:49:14
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 3
+
+Phrase(p58):
+  phrase: |
+         Antoine : Amish-emin entre ...
+  postedAt: 2011-01-12 13:52:58
+  authors:
+        - AAntoine
+  postBy: ULudo
+  score: 3
+
+Phrase(p59):
+  phrase: |
+         Antoine : De très belles randos à faire en Roumanie, dans les Carpates...
+         Jean : A quatre pattes c'est pas très pratique pour une rando
+  postedAt: 2011-01-12 14:35:40
+  authors:
+        - AAntoine
+        - AJean
+  postBy: ULudo
+  score: 3
+
+Phrase(p60):
+  phrase: |
+         Avatar que jamais
+  postedAt: 2011-01-13 09:11:23
+  authors:
+        - AJean
+  postBy: ULudo
+  score: 3
+
+Phrase(p61):
+  phrase: |
+         10h28: Ludovic: tu connais black in black?
+         10h29: Jean: heu non ca me dit rien
+         10h29: Ludovic: AC/DC
+         10h30: Jean: ok attend je vais aller voir sur deezer
+         10h30: Ludovic: c'est déjà 10h et demi
+  postedAt: 2011-01-13 09:35:09
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 6
+
+Phrase(p62):
+  phrase: |
+         Ludo: wahou ça décape
+         Jean: et d'épée !
+  postedAt: 2011-01-19 13:06:40
+  authors:
+        - AJean
+  postBy: ULudo
+  score: 4
+
+Phrase(p63):
+  phrase: |
+         Dépêchons-nous de ne rien faire!
+  postedAt: 2011-01-19 13:07:25
+  authors:
+        - AJeff
+  postBy: UJean
+  score: 3
+
+Phrase(p64):
+  phrase: |
+         Oracle, Ô désespoir...
+  postedAt: 2011-01-25 12:53:56
+  authors:
+        - AFrancois
+  postBy: UFred
+  score: 3
+
+Phrase(p65):
+  phrase: |
+         Franck: chez Ausy ils disent si c'est Aptus on l'a dans l'anus !
+  postedAt: 2011-01-25 16:07:44
+  authors:
+        - AFranck
+  postBy: UJean
+  score: 6
+
+Phrase(p66):
+  phrase: |
+         Merci Delphine pour tous ces bons tarifs que tu nous fais.
+  postedAt: 2011-01-27 10:02:40
+  authors:
+        - AFranck
+  postBy: UAntoine
+  score: 15
+
+Phrase(p67):
+  phrase: |
+         Un dos de saumon, et les cotés aussi
+  postedAt: 2011-01-27 10:03:03
+  authors:
+        - ADjamel
+  postBy: UAntoine
+  score: 1
+
+Phrase(p68):
+  phrase: |
+         Antoine : on se fait une aprés midi calisson
+         Franck : moi je voulais faire une soirée caleçon
+  postedAt: 2011-01-27 10:03:42
+  authors:
+        - AFranck
+  postBy: UAntoine
+  score: 3
+
+Phrase(p69):
+  phrase: |
+         Pas de mauvaise blague avec le \"samoussa\"
+  postedAt: 2011-01-27 10:04:18
+  authors:
+        - AStephane
+  postBy: UAntoine
+  score: 2
+
+Phrase(p70):
+  phrase: |
+         Djamel : c'est quoi le pain perdu ?
+         Ludo : Faut d'abord qu'on le retrouve.
+  postedAt: 2011-01-27 10:05:12
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 3
+
+Phrase(p71):
+  phrase: |
+         C'est Fred qui végète rien
+  postedAt: 2011-01-27 10:05:34
+  authors:
+        - AFranck
+  postBy: UAntoine
+  score: 3
+
+Phrase(p72):
+  phrase: |
+         Comme c'est le cas C2E, brouillé ça va bien.
+  postedAt: 2011-01-27 10:06:10
+  authors:
+        - AFranck
+  postBy: UAntoine
+  score: 3
+
+Phrase(p73):
+  phrase: |
+         Le chinois, on nem ou on nem pas
+  postedAt: 2011-01-27 10:06:25
+  authors:
+        - AFranck
+  postBy: UAntoine
+  score: 4
+
+Phrase(p74):
+  phrase: |
+         Sur cette offre, on aura du financement. On a demandé : C2E, WE-IP.
+  postedAt: 2011-01-27 10:07:19
+  authors:
+        - AFranck
+  postBy: UAntoine
+  score: 3
+
+Phrase(p75):
+  phrase: |
+         Il vaut mieux faire que pas faire.
+  postedAt: 2011-01-27 10:07:39
+  authors:
+        - AFranck
+  postBy: UAntoine
+  score: 4
+
+Phrase(p76):
+  phrase: |
+         Jean: il faut créer un validator
+         Ludo: et oui le valide à raison
+  postedAt: 2011-01-28 09:53:56
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 4
+
+Phrase(p77):
+  phrase: |
+         Jean: C'est l'heure d'aller manger des bons petits plats sains
+         Ludo: ta
+  postedAt: 2011-01-31 11:17:13
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p78):
+  phrase: |
+         Un wicket service compris!
+  postedAt: 2011-02-02 14:07:52
+  authors:
+        - AFrancois
+  postBy: UJean
+  score: 2
+
+Phrase(p79):
+  phrase: |
+         Jean: tu sais pas ce que c'est un chaperon?
+         Ludo: si, c'est un animal de compagnie svelte 
+  postedAt: 2011-02-02 15:33:56
+  authors:
+        - ALudo
+  postBy: UJean
+  score: 3
+
+Phrase(p80):
+  phrase: |
+         Je me suis trompé dans mon erreur
+  postedAt: 2011-02-04 11:04:36
+  authors:
+        - AJeff
+  postBy: UJean
+  score: 2
+
+Phrase(p81):
+  phrase: |
+         jean: deploy
+         Antoine: ploy, ploy, ploy, ploy, ploy, ploy, ploy, ploy, ploy, ploy.
+  postedAt: 2011-02-07 10:36:36
+  authors:
+        - AAntoine
+  postBy: UJean
+  score: 3
+
+Phrase(p82):
+  phrase: |
+         Si tu fais une classe en inner, ça va toujours plus vite que si tu la fais en deux heures
+  postedAt: 2011-02-09 10:13:06
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 7
+
+Phrase(p83):
+  phrase: |
+         Guy : quand Ludo se lâche, il se lâche.
+         Benjamin : ah, c'était ça l'odeur.
+  postedAt: 2011-02-11 15:59:27
+  authors:
+        - ABenjamin
+  postBy: UAntoine
+  score: 4
+
+Phrase(p84):
+  phrase: |
+         Jean : il est pas con, Fucius.
+  postedAt: 2011-02-17 08:48:31
+  authors:
+        - AJean
+  postBy: UAntoine
+  score: 2
+
+Phrase(p85):
+  phrase: |
+         Jean: Alors vous vous éclatez?
+         Benjamin: comme des petits fous et pas comme des petits fours sinon ça serai la boucherie!
+         
+  postedAt: 2011-02-17 13:56:31
+  authors:
+        - ABenjamin
+  postBy: UJean
+  score: 3
+
+Phrase(p86):
+  phrase: |
+         Sylvain : Bon moi je vais me barrer
+         Fred : Non toi tu vas te Brouillat ! C'est moi qui vais me Barré !
+  postedAt: 2011-02-28 10:47:04
+  authors:
+        - AFred
+  postBy: Usylvain
+  score: 4
+
+Phrase(p87):
+  phrase: |
+         Jean: Mercredi prochain on vient tous déguisés c'est Mardi Gras
+         Ben: on va se déguiser en cholestérol!
+  postedAt: 2011-03-01 08:50:57
+  authors:
+        - ABenjamin
+  postBy: UJean
+  score: 3
+
+Phrase(p88):
+  phrase: |
+         Avec communicator, on communique à tort ...
+  postedAt: 2011-03-01 14:37:57
+  authors:
+        - ASylvain
+  postBy: UFred
+  score: 2
+
+Phrase(p89):
+  phrase: |
+         Sylvain : tu devrais pas écrire \"TU\" dans les commentaires SVN car les tests devraient être implicites !
+         Ludo : non on est deux alors deuxplicites
+  postedAt: 2011-03-03 14:16:48
+  authors:
+        - ALudo
+  postBy: Usylvain
+  score: 2
+
+Phrase(p90):
+  phrase: |
+         Fred : pourquoi jean ?
+         Sylvain : parceque j'en ai marre !
+  postedAt: 2011-03-08 13:30:29
+  authors:
+        - ASylvain
+        - AFred
+  postBy: UFred
+  score: 2
+
+Phrase(p91):
+  phrase: |
+         Hibernate c'est un truc qui ne marche qu'en hivers
+  postedAt: 2011-03-09 11:10:37
+  authors:
+        - AFred
+  postBy: Usylvain
+  score: 2
+
+Phrase(p92):
+  phrase: |
+         Si Java bien c'est JavaBean
+  postedAt: 2011-05-04 08:11:05
+  authors:
+        - ABenjamin
+  postBy: ULudo
+  score: 3
+
+Phrase(p93):
+  phrase: |
+         Jean-François: Alors les pop, ça marche comment !?
+         Ludo: ça dépend s'il a des cornes...
+         Ludo: (le pop-corn)
+  postedAt: 2011-05-05 09:19:40
+  authors:
+        - ALudo
+  postBy: ULudo
+  score: 3
+
+Phrase(p94):
+  phrase: |
+         Antoine: Hier j'ai fait du réseau, j'ai enfin fait mon pont aérien.
+         JohnnyTof: C'était planant !?
+  postedAt: 2011-05-09 09:05:00
+  authors:
+        - AJohnnyTof
+  postBy: ULudo
+  score: 2
+
+Phrase(p95):
+  phrase: |
+         Antoine: on est en train de parler salaire
+         Jean: quoi ça pue chez vous ? 
+         Jean: (Sale-air)
+  postedAt: 2011-05-09 15:06:00
+  authors:
+        - AJean
+  postBy: ULudo
+  score: 2
+
+Phrase(p96):
+  phrase: |
+         Antoine : t'as fait un fork.
+         Ludo : comme bibi ?
+  postedAt: 2011-05-11 10:49:40
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 2
+
+Phrase(p97):
+  phrase: |
+         Y'a plus de port que de mal
+  postedAt: 2011-05-12 10:37:41
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 3
+
+Phrase(p98):
+  phrase: |
+         Ben : à poil les noeuds
+  postedAt: 2011-05-16 10:05:01
+  authors:
+        - ABen
+  postBy: UAntoine
+  score: 2
+
+Phrase(p99):
+  phrase: |
+         Guy : il y a trois fichiers en conflit
+         Ludo : des conflits de canards ?
+  postedAt: 2011-05-16 10:08:53
+  authors:
+        - ALudo
+  postBy: UAntoine
+  score: 2
+
+Phrase(p100):
+  phrase: |
+         Une sous revert qui courrait dans l'herbe ...
+  postedAt: 2011-05-25 12:49:58
+  authors:
+        - ALudo
+  postBy: ULudo
+  score: 2
+
+Phrase(p101):
+  phrase: |
+         Jennifer: tu bosses sur quoi Ludovic
+         Jean: il bosse sur sa chaise !
+  postedAt: 2011-06-01 13:39:09
+  authors:
+        - AJean
+  postBy: ULudo
+  score: 3
+
+Phrase(p102):
+  phrase: |
+         C'est à cause d'Oracle qu'il fait mauvais, ils ont racheté Sun.
+  postedAt: 2011-08-09 13:29:39
+  authors:
+        - AAntoine
+  postBy: ULudo
+  score: 2
