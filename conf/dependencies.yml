@@ -1,0 +1,5 @@
+require:
+    - play
+    - play -> paginate head
+    - play -> crud
+    - play -> secure
