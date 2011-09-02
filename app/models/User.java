@@ -1,11 +1,13 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import play.data.validation.Required;
 import play.db.jpa.Model;
 
 @Entity
+@Table(name="my_user")
 public class User extends Model {
 	
 	@Required
