@@ -21,7 +21,6 @@ public class Phrase extends Model {
 	
 	@Required
 	@MaxSize(1000)
-	@Lob
 	public String phrase;
 	public Date postedAt;
 	
