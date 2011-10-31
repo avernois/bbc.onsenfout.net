@@ -84,7 +84,7 @@ public class Phrase extends Model {
 	}
 	
 	public static List<Phrase> findByAuthor(String name) {
-		return Phrase.find("select distinct p from Phrase p join p.authors as a where a.name = ? order by postedAt desc", name).fetch();
+		return Phrase.find("select distinct p from Phrase p join p.authors as a where a.name = ? order by p.postedAt desc", name).fetch();
 	}
 	
 	public String toString() {
